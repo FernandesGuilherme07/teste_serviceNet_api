@@ -4,7 +4,6 @@ import cors from 'cors';
 // routes Aplication
 import routes from './routes';
 
-
 class App {
   constructor() {
     this.server = express();
