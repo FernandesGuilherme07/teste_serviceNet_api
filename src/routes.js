@@ -6,3 +6,4 @@ routes.get('/', (req, res) => {
     res.json({Hello: world})
 });
 
+export default routes;
