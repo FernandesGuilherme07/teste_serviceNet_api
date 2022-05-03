@@ -4,6 +4,9 @@ import cors from 'cors';
 // routes Aplication
 import routes from './routes';
 
+// connection mongoose of mongodb
+import './database';
+
 class App {
   constructor() {
     this.server = express();

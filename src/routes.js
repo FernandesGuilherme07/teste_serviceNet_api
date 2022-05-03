@@ -1,8 +1,8 @@
 import { Router } from 'express';
 
-import UsersController from './controllers/UsersContoller';
-
 import SessionsContoller from './controllers/sessionsController';
+import UsersController from './controllers/UsersContoller';
+import ClientsContoller from './controllers/ClientsContoller';
 
 import auth from './middlewares/auth';
 
@@ -12,10 +12,18 @@ routes.post('/sessions', SessionsContoller.create);
 
 routes.use(auth);
 
+// users routes
 routes.post('/users', UsersController.create);
 routes.get('/users', UsersController.index);
 routes.get('/users/:id', UsersController.show);
 routes.put('/users/:id', UsersController.update);
 routes.delete('/users/:id', UsersController.destroy);
+
+// clients routes
+routes.get('/users/:user_id/clients', ClientsContoller.index);
+routes.get('/users/:user_id/clients/:id', ClientsContoller.show);
+routes.post('/users/:user_id/clients', ClientsContoller.create);
+routes.put('/users/:user_id/clients/:id', ClientsContoller.update);
+routes.delete('/users/:user_id/clients/:id', ClientsContoller.destroy);
 
 export default routes;
