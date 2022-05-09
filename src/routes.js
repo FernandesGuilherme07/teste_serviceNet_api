@@ -9,13 +9,13 @@ import auth from './middlewares/auth';
 const routes = new Router();
 
 routes.post('/sessions', SessionsContoller.create);
+routes.post('/users', UsersController.create);
 
 routes.use(auth);
 
-// users routes
-routes.post('/users', UsersController.create);
+//  users routes
 routes.get('/users', UsersController.index);
-routes.get('/users/:id', UsersController.show);
+// routes.get('/users/:id', UsersController.show);
 routes.put('/users/:id', UsersController.update);
 routes.delete('/users/:id', UsersController.destroy);
 
