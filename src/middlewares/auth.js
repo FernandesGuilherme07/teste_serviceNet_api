@@ -1,5 +1,6 @@
 import { verify } from 'jsonwebtoken';
-import config from '../config/auth';
+import { promisify } from 'util';
+import authConfig from '../config/auth';
 
 export default async (req, res, next) => {
   const authHeader = req.headers.authorization;
@@ -8,13 +9,13 @@ export default async (req, res, next) => {
 
   const [, token] = authHeader.split(' ');
 
-  const VerifyJWT = verify(token, config.secret, (err, decoded) => {
-    if (err) {
-      return res.status(401).send({ message: 'Unauthorized!' });
-    }
+  try {
+    const decoded = promisify(() => verify(token, authConfig.secret));
     req.userId = decoded.id;
-    return next();
-  });
 
-  return VerifyJWT();
+    return next();
+  } catch (error) {
+    console.log(error);
+    return res.status(401).json({ error: 'invalid token.' });
+  }
 };

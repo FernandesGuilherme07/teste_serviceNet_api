@@ -106,6 +106,9 @@ class ClientsCotroller {
       if (!user) {
         return res.status(404).json();
       }
+      if (email) {
+        return res.status(404).json();
+      }
 
       const client = await Client.findOne({
         userId: user_id,
