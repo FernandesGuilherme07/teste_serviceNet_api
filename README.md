@@ -1,5 +1,5 @@
 # Uma API REST simples para consumo de dados
--MongoDB atlas:
+- MongoDB atlas:
 
   Para subir o projeto no ar, copie o arquivo `.env_example` para `.env` e adicione sua url de conexão ao MongoDB.
 
@@ -11,11 +11,17 @@
     make up
     ```
 
+  Para parar o container docker, execute o comando abaixo:
+
+    ```
+    make logs
+    ```
+
   Para verificar o console do seu docker compose, execute o comando abaixo:
 
-  ```
-  make logs
-  ```
+    ```
+    make logs
+    ```
 
 Execute os comandos abaixo:
 
