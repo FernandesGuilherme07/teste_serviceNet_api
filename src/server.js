@@ -1,6 +1,8 @@
 import App from './app';
 
-const port = 5000;
+require('dotenv');
+
+const port = process.env.SERVER_PORT;
 
 App.listen(port, () => {
   console.log(`Servidor executando na porta: ${port}`);
