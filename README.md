@@ -14,7 +14,7 @@
   Para parar o container docker, execute o comando abaixo:
 
     ```
-    make logs
+    make down
     ```
 
   Para verificar o console do seu docker compose, execute o comando abaixo:
