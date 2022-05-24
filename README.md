@@ -3,7 +3,7 @@
 
   Para subir o projeto no ar, copie o arquivo `.env_example` para `.env` e adicione sua url de conexão ao MongoDB.
 
-- Docker-compose e Makefiles:
+-Docker e Docker-compose :
 
   Com o docker e o make ja instalados na sua máquina, execute o comando abaixo:
 
