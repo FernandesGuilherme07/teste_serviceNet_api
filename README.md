@@ -1,4 +1,21 @@
 # Uma API REST simples para consumo de dados
+
+
+## 📝 Tecnologias
+
+- [Node.js](https://nodejs.org/en/)
+- [ESLint](https://eslint.org/)
+- [Nodemon](https://www.npmjs.com/package/nodemon)
+- [Sucrase](https://www.npmjs.com/package/sucrase)
+- [Express](https://expressjs.com/)
+- [JWT](https://www.npmjs.com/package/jsonwebtoken)
+- [Mongoose](https://sequelize.org/)
+- [MongoDB](https://www.mongodb.com/)
+- [Docker](https://www.docker.com/)
+- [Docker-compose](https://docs.docker.com/compose/)
+
+
+
 - MongoDB atlas:
 
   Para subir o projeto no ar, copie o arquivo `.env_example` para `.env` e adicione sua url de conexão ao MongoDB.
@@ -11,7 +28,7 @@
   npm run dev
   ```
 
-  Neste ponto sua API deverá está rodando no endereço http://127.0.0.1:3001/.
+  Neste ponto sua API deverá está rodando no endereço http://127.0.0.1:3001/v1.
 
 
 -Com Docker e Docker-compose :
@@ -40,7 +57,7 @@
     ```
 
 
-  Neste ponto sua API deverá está rodando no endereço http://127.0.0.1:3001/.
+  Neste ponto sua API deverá está rodando no endereço http://127.0.0.1:3001/v1.
 
 
 Perceba que as configurações começando com `process.env.` vem do arquivo `.env`.
@@ -57,40 +74,39 @@ Perceba que as configurações começando com `process.env.` vem do arquivo `.en
 
 ### post -> '/users':
   Aonde será criado o usuário, e será requerido o email e o password usuário no body da requisição.
-  -Private route
   - StatusCodes:
 
     400: email já cadastrado.
 
     201: sucesso/cadastrado.
 
-    500: erro interno
+    500: erro interno.
 
-### get ->'/users/:user_id/clients':
-  Aonde será exibido os clientes cadastrados na base de dados.
-  -Private route
+### get -> '/users/:user_id/clients':
+  Aonde será exibido todos os clientes cadastrados na base de dados.
+  - Private route.
   - StatusCodes:
 
     404: usuário inexistente.
 
     200: sucesso.
 
-    500: erro interno
+    500: erro interno.
 
-### get ->'/users/:user_id/clients/:id':
-  Aonde será exibido por id o cliente cadastrado na base de dados.
-  -Private route
+### get -> '/users/:user_id/clients/:id':
+  Aonde será exibido por id, o cliente cadastrado na base de dados.
+  - Private route
   - StatusCodes:
 
     404: usuário inexistente/ cliente inexistente.
 
     200: sucesso.
 
-    500: erro interno
+    500: erro interno.
 
-### post ->'/users/:user_id/clients':
+### post -> '/users/:user_id/clients':
   Aonde será criado os clientes.
-  -Private route
+  - Private route
   - StatusCodes:
 
     404: usuário inexistente.
@@ -99,27 +115,27 @@ Perceba que as configurações começando com `process.env.` vem do arquivo `.en
 
     201: sucesso/cadastrado.
 
-    500: erro interno
+    500: erro interno.
 
-### put ->'/users/:user_id/clients/:id':
+### put -> '/users/:user_id/clients/:id':
   Aonde o cliente será editado por id.
-  -Private route
+  - Private route
   - StatusCodes:
 
     404: usuário inexistente/ cliente inexistente.
 
     200: sucesso/ atualizado.
 
-    500: erro interno
+    500: erro interno.
 
-### delete ->'/users/:user_id/clients/:id':
+### delete -> '/users/:user_id/clients/:id':
   Aonde o cliente será deletado por id.
-  -Private route
+  - Private route
   - StatusCodes:
 
     404: usuário inexistente/ cliente inexistente.
 
     200: sucesso/ atualizado.
 
-    500: erro interno
+    500: erro interno.
 
