@@ -30,7 +30,7 @@
   npm run dev
   ```
 
-  Neste ponto sua API deverá está rodando no endereço http://127.0.0.1:3001/v1.
+  Neste ponto sua API deverá está rodando no endereço http://127.0.0.1:5000/v1.
 
 
 ## Com Docker e Docker-compose :
@@ -59,7 +59,7 @@
     ```
 
 
-  Neste ponto sua API deverá está rodando no endereço http://127.0.0.1:3001/v1.
+  Neste ponto sua API deverá está rodando no endereço http://127.0.0.1:5000/v1.
 
 
 
