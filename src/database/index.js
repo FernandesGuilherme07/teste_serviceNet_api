@@ -2,13 +2,16 @@ import mongoose from 'mongoose';
 
 import config from '../config/db';
 
-async function Database() {
-  await mongoose.connect(`${config.url}`);
-  try {
-    return console.log('DB Connected.');
-  } catch (e) {
-    return console.log({ connection_db_error: e });
+class Database {
+  constructor() {
+    this.connection = mongoose.connect(
+      config.url,
+      {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      },
+    );
   }
 }
 
-export default Database;
+export default new Database();
