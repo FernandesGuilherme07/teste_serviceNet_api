@@ -15,11 +15,13 @@
 - [Docker-compose](https://docs.docker.com/compose/)
 
 
+* Para subir o projeto no ar, copie o arquivo `.env_example` para `.env`.
+* Perceba que as configurações começando com `process.env.` vem do arquivo `.env`.
 
-- MongoDB atlas:
+## MongoDB atlas:
 
-  Para subir o projeto no ar, copie o arquivo `.env_example` para `.env` e adicione sua url de conexão ao MongoDB.
-  E em /src/db.js, descomente as opções para o mongodb atlas e comente as opções para o docker compose.
+  Adicione sua url de conexão ao MongoDB.
+  E em /src/db.js, descomente as opções para o mongodb atlas e comente as opções para o docker-compose.
 
   e execute os comandos abaixo na raiz do projeto:
 
@@ -31,7 +33,7 @@
   Neste ponto sua API deverá está rodando no endereço http://127.0.0.1:3001/v1.
 
 
--Com Docker e Docker-compose :
+## Com Docker e Docker-compose :
 
   Com o docker e o docker-file ja instalados na sua máquina, execute o comando abaixo:
 
@@ -60,7 +62,7 @@
   Neste ponto sua API deverá está rodando no endereço http://127.0.0.1:3001/v1.
 
 
-Perceba que as configurações começando com `process.env.` vem do arquivo `.env`.
+
 
 ## As rotas da aplicação são:
 
